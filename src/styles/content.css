@@ -11,4 +11,10 @@
     font-weight: bold; /* Жирный шрифт */
     text-align: center; /* Выравнивание текста по центру */
     cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+/* Эффект при наведении курсора */
+.custom-button:hover {
+    background-color: #777; /* Изменяем цвет фона при наведении */
 }
