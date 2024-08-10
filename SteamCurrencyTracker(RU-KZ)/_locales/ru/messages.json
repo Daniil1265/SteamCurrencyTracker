@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Валютный трекер Steam",
+        "description": "Extension name"
+    },
+    "description": {
+        "message": "Трекер валют в Steam Рубль/Тенге",
+        "description": "Extension description"
+    }
+}

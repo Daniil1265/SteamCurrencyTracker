@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Steam Currency Tracker",
+        "description": "Extension name"
+    },
+    "description": {
+        "message": "Steam Currency Tracker RU/KZT",
+        "description": "Extension description"
+    }
+}
