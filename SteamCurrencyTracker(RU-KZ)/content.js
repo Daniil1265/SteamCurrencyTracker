@@ -1,3 +1,5 @@
+// content.js
+
 // Проверяем, включено ли расширение
 chrome.storage.local.get('extensionEnabled', function (data) {
     if (!data.extensionEnabled) {
@@ -13,6 +15,20 @@ chrome.storage.local.get('extensionEnabled', function (data) {
         // Поиск элемента с названием игры
         const appNameElement = document.getElementById('appHubAppName');
         if (appNameElement) {
+            // Создание контейнера для Shadow DOM
+            const shadowHost = document.createElement('div');
+            shadowHost.style.display = 'inline-block'; // Делаем элемент видимым
+            appNameElement.parentElement.appendChild(shadowHost);
+
+            // Создание Shadow DOM
+            const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+
+            // Добавляем стили в Shadow DOM
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = chrome.runtime.getURL('content.css'); // Путь к вашему CSS файлу
+            shadowRoot.appendChild(link);
+
             // Создание кнопки
             const steamDBLink = `https://steamdb.info/app/${appId}/?cc=ru`;
             const button = document.createElement('a');
@@ -20,22 +36,10 @@ chrome.storage.local.get('extensionEnabled', function (data) {
             button.target = '_blank';
             button.rel = 'noopener noreferrer'; // Безопасность и производительность
             button.innerText = 'Посмотреть на SteamDB';
+            button.className = 'custom-button'; // Применение класса стиля
 
-            // Стилизация кнопки
-            button.style.display = 'inline-block';
-            button.style.margin = '10px 0';         // Отступы сверху и снизу
-            button.style.padding = '10px 15px';     // Внутренние отступы (padding)
-            button.style.backgroundColor = '#555';  // Приятный серый цвет
-            button.style.color = 'white';           // Белый текст
-            button.style.borderRadius = '5px';      // Скругленные углы
-            button.style.textDecoration = 'none';   // Убираем подчеркивание
-            button.style.fontSize = '16px';         // Увеличенный размер шрифта
-            button.style.fontWeight = 'bold';       // Жирный шрифт
-            button.style.textAlign = 'center';      // Выравнивание текста по центру
-            button.style.cursor = 'pointer';        // Курсор в виде руки при наведении
-
-            // Вставка кнопки рядом с названием игры
-            appNameElement.parentElement.appendChild(button);
+            // Вставка кнопки в Shadow DOM
+            shadowRoot.appendChild(button);
         }
     }
 });

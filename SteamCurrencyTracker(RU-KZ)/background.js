@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(function (message) {
     chrome.tabs.query({}, function(tabs) {
         tabs.forEach(tab => {
             // Проверяем, соответствует ли URL вкладки страницам, указанным в manifest.json
-            if (tab.url.includes("store.steampowered.com") ||
+            if (tab.url.includes("store.steampowered.com/app") ||
                 (tab.url.includes("steamdb.info/app/") && tab.url.includes("?cc=ru")) ||
                 tab.url.includes("steamdb.info/sub/")) {
 
