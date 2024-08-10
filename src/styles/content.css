@@ -1,20 +1,18 @@
-/* content.css */
 .custom-button {
     display: inline-block;
-    margin: 10px 0; /* Отступы сверху и снизу */
-    padding: 10px 15px; /* Внутренние отступы (padding) */
+    margin: 10px 0;         /* Отступы сверху и снизу */
+    padding: 10px 15px;     /* Внутренние отступы (padding) */
     background-color: #555; /* Приятный серый цвет */
-    color: white; /* Белый текст */
-    border-radius: 5px; /* Скругленные углы */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 16px; /* Увеличенный размер шрифта */
-    font-weight: bold; /* Жирный шрифт */
-    text-align: center; /* Выравнивание текста по центру */
-    cursor: pointer; /* Курсор в виде руки при наведении */
-    transition: background-color 0.3s ease; /* Плавное изменение фона */
+    color: white;           /* Белый текст */
+    border-radius: 5px;     /* Скругленные углы */
+    text-decoration: none;  /* Убираем подчеркивание */
+    font-size: 16px;        /* Увеличенный размер шрифта */
+    font-weight: bold;      /* Жирный шрифт */
+    text-align: center;     /* Выравнивание текста по центру */
+    cursor: pointer;        /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход для hover */
 }
 
-/* Эффект при наведении курсора */
 .custom-button:hover {
-    background-color: #777; /* Изменяем цвет фона при наведении */
+    background-color: #333; /* Темный цвет при наведении */
 }

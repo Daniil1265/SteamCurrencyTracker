@@ -26,7 +26,7 @@ chrome.storage.local.get('extensionEnabled', function (data) {
             // Добавляем стили в Shadow DOM
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = chrome.runtime.getURL('css/content.css'); // Путь к вашему CSS файлу
+            link.href = chrome.runtime.getURL('styles/content.css'); // Путь к вашему CSS файлу
             shadowRoot.appendChild(link);
 
             // Создание кнопки
