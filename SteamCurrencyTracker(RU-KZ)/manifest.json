@@ -3,7 +3,7 @@
     "name": "Steam Currency Tracker",
     "version": "1.0",
     "description": "Steam Currency Tracker RU/KZT",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
     "background": {
         "service_worker": "background.js"
     },
@@ -17,6 +17,9 @@
         "48": "icons/icon_48.png",
         "128": "icons/icon_128.png"
     },
+    "host_permissions": [
+        "*://store.steampowered.com/*", "*://steamdb.info/app/*/?cc=ru", "*://steamdb.info/sub/*"
+    ],
     "content_scripts": [
         {
             "matches": ["*://store.steampowered.com/*"],
