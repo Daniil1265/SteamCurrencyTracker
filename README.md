@@ -1,7 +1,3 @@
-Here's a well-formatted Markdown file based on your description:
-
----
-
 # Steam Currency Tracker Extension
 
 This browser extension enhances your Steam browsing experience by allowing you to quickly check the price difference between Russian Rubles (RUB) and Kazakhstani Tenge (KZT) through SteamDB. This feature can be particularly useful to verify if you can gift a game.
